@@ -1,95 +1,101 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
+:root {
+    --a: #0a1747;
+    --b: #0029fa;
+    --c: #8d07f6;
+    --d: #ffff05;
+    --e: #d4dbf5;
+}
+
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 body {
-    background-color: #f6f7fb;
     font-family: 'Muli', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     overflow: hidden;
-    margin: 0;
 }
 
 .container {
     text-align: center;
 }
-
 .progress-container {
+    max-width: 100%;
+    width: 360px;
     display: flex;
     justify-content: space-between;
-    width: 360px;
-    max-width: 100%;
-    margin-bottom: 30px;
     position: relative;
+    margin-bottom: 30px;
 }
-
 .progress-container::before {
     content: '';
-    background-color: #e0e0e0;
+    background-color: var(--e);
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translateY(-50%);
     height: 4px;
     width: 100%;
+    transform: translateY(-50%);
     z-index: -1;
 }
 
 .progress {
-    background-color: #3498db;
+    background-color: var(--b);
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translateY(-50%);
     height: 4px;
     width: 0%;
+    transform: translateY(-50%);
     z-index: -1;
-    transition: 0.4s ease;
+    transition: 0.4s ease-in;
 }
 
 .circle {
-    background-color: #fff;
-    color: #999;
-    height: 30px;
     width: 30px;
+    height: 30px;
     border-radius: 50%;
+    background-color: var(--a);
+    color: #fff;
+    font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px solid #e0e0e0;
+    border: 1px solid var(--e);
     transition: 0.4s ease;
 }
 
 .circle.active {
-    border-color: #3498db;
+    background-color: var(--c);
+    border-color: var(--b);
 }
 
 .btn {
-    background-color: #3498db;
+    padding: 8px 30px;
+    background-color: var(--b);
     color: #fff;
     border: 0;
-    border-radius: 6px;
     cursor: pointer;
-    padding: 8px 30px;
+    border-radius: 24px;
     font-family: inherit;
-    font-size: 14px;
-    margin: 5px;
+    margin: 10px;
 }
 
-.btn:active {
-    transform: scale(0.98);
+.btn:disabled {
+    background-color: var(--e);
+    cursor: not-allowed;
+    transition: 0.3s ease-in;
 }
 
 .btn:focus {
     outline: 0;
 }
-
-.btn:disabled {
-    background-color: #e0e0e0;
-    cursor: not-allowed;
+.btn:active {
+    transform: scale(0.98);
 }
