@@ -2,7 +2,7 @@
   "name": "50days",
   "version": "1.0.0",
   "description": "vanila javascript with html css",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "deploy": "gh-pages -d src"
   },
