@@ -1,0 +1,22 @@
+{
+  "name": "50days",
+  "version": "1.0.0",
+  "description": "vanila javascript with html css",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Inzahanyang/50days.git"
+  },
+  "author": "yang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Inzahanyang/50days/issues"
+  },
+  "homepage": "https://inzahanyang.github.io/50days",
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
