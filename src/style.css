@@ -11,18 +11,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  overflow: hidden;
 }
 
 h1 {
-  margin-bottom: 200px;
+  margin: 100px 0;
 }
 
 .box-container {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   gap: 50px 20px;
+  margin-bottom: 100px;
 }
 
 .box a {
