@@ -1,1 +1,1 @@
-[Link](https://inzahanyang.github.io/50days/, "vanila link")
+[Link](https://inzahanyang.github.io/50days/ "vanila link")
