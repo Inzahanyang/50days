@@ -1,11 +1,1 @@
-### Expanding Cards
-
-### Progress Steps
-
-### Rotating Navigation Animation
-
-### Hidden Search Widget
-
-### Blurry Loading
-
-### Scroll Animation
+[Link](https://inzahanyang.github.io/50days/, "vanila link")
