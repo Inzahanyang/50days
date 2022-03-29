@@ -21,7 +21,7 @@ h1 {
 
 .screen {
   cursor: pointer;
-  width: 60%;
+  width: 30%;
   background-color: #000 !important;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -29,7 +29,7 @@ h1 {
 
 .controls {
   background-color: #333;
-  width: 60%;
+  width: 30%;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   display: flex;
