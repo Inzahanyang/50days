@@ -3,13 +3,14 @@
 }
 
 body {
+  font-family: Georgia, "Times New Roman", Times, serif;
   background-color: darkolivegreen;
   color: #fff;
   margin: 0;
 }
 
 .container {
-  max-width: 700px;
+  max-width: 800px;
   margin: auto;
   text-align: center;
   display: flex;
@@ -20,14 +21,6 @@ body {
 
 .flex {
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 button,
@@ -36,8 +29,9 @@ input {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   border: none;
-  padding: 5px 10px;
-  outline: none;
+  font-size: 14px;
+  padding: 8px 10px;
+  margin: 0;
 }
 
 input[type="text"] {
@@ -45,13 +39,16 @@ input[type="text"] {
 }
 
 .search-btn {
+  cursor: pointer;
+  border-left: 0;
   border-radius: 0;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
 
 .random-btn {
-  margin-left: 5px;
+  cursor: pointer;
+  margin-left: 10px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
@@ -60,18 +57,22 @@ input[type="text"] {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  margin-top: 20px;
 }
 
 .meal {
   width: 180px;
   height: 180px;
   position: relative;
+  text-align: center;
+  cursor: pointer;
 }
 
 .meal img {
   width: 100%;
   height: 100%;
-  border: 2px solid #fff;
+  border: 4px solid #fff;
+  border-radius: 2px;
 }
 
 .meal-info {
@@ -80,15 +81,84 @@ input[type="text"] {
   left: 0;
   width: 100%;
   height: 100%;
-  font-size: 12px;
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.7);
   transition: opacity 0.2s ease-in;
   opacity: 0;
 }
 
 .meal:hover .meal-info {
   opacity: 1;
+}
+
+.single-meal {
+  width: 70%;
+  margin: 30px auto;
+}
+
+.single-meal img {
+  width: 300px;
+  border: 4px solid #fff;
+  margin: 15px;
+  border-radius: 2px;
+}
+
+.single-meal-info {
+  border: 2px dashed #e09850;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.single-meal {
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+.main ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.main ul li {
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  background-color: #fff;
+  color: darkolivegreen;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 0 5px 5px 0;
+  padding: 5px;
+}
+
+@media (max-width: 800px) {
+  .meals {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .meals {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .meal {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  input[type="text"] {
+    width: 100%;
+  }
+  .meals {
+    grid-template-columns: 1fr;
+  }
+  .meal {
+    width: 300px;
+    height: 300px;
+  }
 }
