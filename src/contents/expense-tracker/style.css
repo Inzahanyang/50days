@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+
+:root {
+  --shadowBox: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: azure;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.container {
+  width: 350px;
+  margin: 30px auto;
+}
+
+.inc-exp-container {
+  border: 1px solid #fff;
+  box-shadow: var(--shadowBox);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.inc-exp-container .plus {
+  color: limegreen;
+}
+
+.inc-exp-container .minus {
+  color: crimson;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #bbb;
+}
+
+.list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: #fff;
+  box-shadow: var(--shadowBox);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.list .plus {
+  border-right: 5px solid limegreen;
+}
+.list .minus {
+  border-right: 5px solid crimson;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+input[type="text"],
+input[type="number"] {
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 2px;
+  border: 1px solid #dedede;
+  width: 100%;
+  margin: 5px 0 8px;
+}
+
+.btn {
+  width: 100%;
+  background-color: #9c88ff;
+  box-shadow: var(--shadowBox);
+  color: #fff;
+  border: none;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  margin: 10px 0 30px;
+  cursor: pointer;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: none;
+}
