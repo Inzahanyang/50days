@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(0deg, lightcoral, lightpink);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  margin-bottom: 150px;
+}
+
+.music-container {
+  background-color: antiquewhite;
+  display: flex;
+  position: relative;
+  padding: 10px 40px;
+  border-radius: 12px;
+  width: 400px;
+}
+
+.music-info {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+}
+
+.music-container.play .music-info {
+  transform: translateY(-50px);
+}
+
+.music-info .progress-container {
+  width: 100px;
+  height: 5px;
+  background-color: #fff;
+}
+
+.img-container {
+  width: 110px;
+}
+
+.img-container img {
+  height: 110px;
+  width: inherit;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: turn 3s linear infinite;
+}
+
+.img-container::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+}
+
+@keyframes turn {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navigation {
+  display: flex;
+}
+
+.action-btn {
+  background-color: transparent;
+  color: darkgray;
+  border: none;
+  padding: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.action-btn-big {
+  font-size: 30px;
+}
