@@ -53,6 +53,11 @@ h1 {
   left: 0;
   top: 0;
   animation: turn 3s linear infinite;
+  animation-play-state: paused;
+}
+
+.music-container.play .img-container img {
+  animation-play-state: running;
 }
 
 .img-container::after {
