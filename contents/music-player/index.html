@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Music player</title>
+  </head>
+  <body>
+    <div class="head">
+      <div><i class="fas fa-music"></i></div>
+      <h1>Music Player</h1>
+      <div><i class="fas fa-music"></i></div>
+    </div>
+    <div class="music-container" id="music-container">
+      <div class="music-info">
+        <h4 id="title">Alla-Turca</h4>
+        <div class="progress-container" id="progress-container">
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+
+      <audio id="audio" src="./music/Alla-Turca.mp3"></audio>
+
+      <div class="img-container">
+        <img id="image" src="./images/Alla-Turca.jpg" alt="cover-image" />
+      </div>
+
+      <div class="navigation">
+        <button id="prev" class="action-btn">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button id="play" class="action-btn action-btn-big">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="action-btn">
+          <i class="fas fa-forward"></i>
+        </button>
+        <button class="action-btn licenses">
+          <i class="fa-brands fa-creative-commons-by">
+            <span>
+              https://soundcloud.com/keysofmoon Attribution 4.0 International
+              (CC BY 4.0) https://creativecommons.org/licenses/by/4.0/ Music
+              promoted by
+              <a href="https://www.chosic.com/" target="_blank">
+                https://www.chosic.com/
+              </a>
+            </span>
+          </i>
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
