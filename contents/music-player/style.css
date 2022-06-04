@@ -183,6 +183,6 @@ body {
   background-color: palevioletred;
   border-radius: 5px;
   height: 100%;
-  width: 20px;
+  width: 0px;
   transition: width 0.1s linear;
 }
