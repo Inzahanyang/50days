@@ -2,6 +2,9 @@ const main = document.querySelector("main");
 const select = document.getElementById("select");
 const text = document.getElementById("text");
 const sendBtn = document.getElementById("send");
+const toggleBtn = document.getElementById("toggle");
+const closeBtn = document.getElementById("close");
+const voiceContainer = document.querySelector(".voice-container");
 
 const data = [
   {
@@ -55,13 +58,11 @@ const data = [
 ];
 
 const message = new SpeechSynthesisUtterance();
+const setText = (text) => (message.text = text);
+const speakText = () => speechSynthesis.speak(message);
+let voices = [];
 
-sendBtn.addEventListener("click", () => {
-  message.text = text.value;
-  speechSynthesis.speak(message);
-});
-
-data.forEach((item) => {
+const createBox = (item) => {
   const box = document.createElement("div");
 
   box.classList.add("box");
@@ -74,22 +75,25 @@ data.forEach((item) => {
   `;
 
   box.addEventListener("click", () => {
-    message.text = text;
-    speechSynthesis.speak(message);
+    setText(text);
+    speakText();
+
+    box.classList.add("active");
+    setTimeout(() => box.classList.remove("active"), 800);
   });
 
   main.appendChild(box);
-});
+};
 
-let voices = [];
+data.forEach(createBox);
 
 const getVoices = () => {
   voices = speechSynthesis.getVoices();
 
   voices.forEach((voice) => {
     const option = document.createElement("option");
-    option.value = voice.name;
 
+    option.value = voice.name;
     option.innerText = `${voice.name} ${voice.lang}`;
 
     select.appendChild(option);
@@ -98,8 +102,22 @@ const getVoices = () => {
 
 speechSynthesis.addEventListener("voiceschanged", getVoices);
 
-select.addEventListener("change", (e) => {
-  message.voice = voices.find((voice) => voice.name === e.target.value);
+sendBtn.addEventListener("click", () => {
+  setText(text.value);
+  speakText();
 });
+
+select.addEventListener(
+  "change",
+  (e) => (message.voice = voices.find((voice) => voice.name === e.target.value))
+);
+
+toggleBtn.addEventListener("click", () =>
+  voiceContainer.classList.toggle("show")
+);
+
+closeBtn.addEventListener("click", () =>
+  voiceContainer.classList.remove("show")
+);
 
 getVoices();

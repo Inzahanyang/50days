@@ -10,16 +10,17 @@
   <body>
     <div class="container">
       <h1>Speech Text Reader</h1>
-      <button>Toggle Text Box</button>
+      <button id="toggle" class="btn toggle-btn">Toggle Text Box</button>
       <div class="voice-container">
+        <div class="close" id="close">X</div>
         <h4>Choose Voice</h4>
-        <button class="close" id="close">X</button>
         <select id="select"></select>
-        <textarea id="text"></textarea>
-        <button class="send" id="send">Read Text</button>
+        <textarea id="text" placeholder="Enter text to read..."></textarea>
+        <button class="send btn" id="send">Read Text</button>
       </div>
       <main></main>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
