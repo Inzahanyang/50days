@@ -12,42 +12,22 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Memory Card</title>
+    <title>Document</title>
   </head>
   <body>
     <button id="clear" class="clear btn">
-      <i class="fas fa-trash"></i> Clear Cards
+      <i class="fas fa-trash"></i> Clear All Cards
     </button>
 
     <h1>
       Memory Cards
-      <button id="show" class="btn btn-small">
-        <i class="fas fa-plus"></i> Add New Card
+      <button id="show" class="btn sm-btn">
+        <i class="fas fa-times"></i> Add New Card
       </button>
     </h1>
 
     <div id="cards-container" class="cards">
-      <!-- <div class="card active">
-        <div class="inner-card">
-          <div class="inner-card-front">
-            <p>What is ReactJS?</p>
-          </div>
-          <div class="inner-card-back">
-            <p>A Programming Language</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="inner-card">
-          <div class="inner-card-front">
-            <p>What is NestJS?</p>
-          </div>
-          <div class="inner-card-back">
-            <p>A framework for NodeJS</p>
-          </div>
-        </div>
-      </div> -->
+      <button id="delete-card" class="delete-card"></button>
     </div>
 
     <div class="navigation">
@@ -63,7 +43,7 @@
     <div id="add-container" class="add-container">
       <h1>
         Add New Card
-        <button id="hide" class="btn btn-small btn-ghost">
+        <button id="hide" class="btn sm-btn gh-btn">
           <i class="fas fa-times"></i>
         </button>
       </h1>
@@ -72,15 +52,12 @@
         <label for="question">Question</label>
         <textarea id="question" placeholder="Enter Question..."></textarea>
       </div>
-
       <div class="form-group">
         <label for="answer">Answer</label>
         <textarea id="answer" placeholder="Enter Answer..."></textarea>
       </div>
 
-      <button id="add-card" class="btn">
-        <i class="fas fa-plus"></i> Add Card
-      </button>
+      <button id="add-card" class="btn">Add Card</button>
     </div>
 
     <script src="script.js"></script>
