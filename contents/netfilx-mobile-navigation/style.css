@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "League Gothic", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.nav-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.open-btn {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+}
+
+.text {
+  letter-spacing: 1.4px;
+  font-size: 16px;
+  opacity: 0.4;
+  margin-top: 12px;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  height: 100vh;
+}
+
+.nav.visible {
+  transform: translateX(0);
+}
+
+.nav-black {
+  background-color: #000;
+  width: 60%;
+  max-width: 360px;
+  min-width: 240px;
+  transition-delay: 0.4s;
+}
+.nav-black.visible {
+  transition-delay: 0s;
+}
+
+.nav-red {
+  width: 95%;
+  background-color: red;
+  transition-delay: 0.2s;
+}
+
+.nav-red.visible {
+  transition-delay: 0.2s;
+}
+
+.nav-white {
+  background-color: #fff;
+  width: 95%;
+  padding: 40px;
+  position: relative;
+  transition-delay: 0s;
+}
+
+.nav-white.visible {
+  transition-delay: 0.4s;
+}
+
+.close-btn {
+  opacity: 0.3;
+  position: absolute;
+  top: 45px;
+  right: 20px;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list li {
+  margin: 25px 0;
+}
+
+.list li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: rgb(145, 141, 141);
+  letter-spacing: 0.5px;
+}
+
+.list ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
